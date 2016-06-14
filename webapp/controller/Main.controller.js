@@ -1,22 +1,14 @@
 sap.ui.define([
 	"de/dlh/lht/ydef/controller/BaseController",
-	'sap/ui/model/json/JSONModel',
+	"de/dlh/lht/ydef/model/formatter",
 	'sap/m/MessageBox',
 	"sap/m/MessageToast"
-], function(BaseController, JSONModel, MessageBox, MessageToast) {
+], function(BaseController, formatter, MessageBox, MessageToast) {
 	"use strict";
 
 	return BaseController.extend("de.dlh.lht.ydef.controller.Main", {
+		
 		onInit : function () {
-			this.getView().setModel(new JSONModel({
-				Pernr : "",
-				Aufnr : "",
-				Kdauf : "",
-				Vornr : "",
-				Kdpos : ""
-			}),
-			"mainModel");
-			
 			// attach handlers for validation errors
 			sap.ui.getCore().attachValidationError(function (evt) {
 				var control = evt.getParameter("element");
@@ -31,6 +23,8 @@ sap.ui.define([
 				}
 			});
 		},
+
+		formatter : formatter,
 		
 		onPressNext: function (oEvent) {
 						// collect input controls

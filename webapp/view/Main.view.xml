@@ -22,16 +22,13 @@
 													<Input	id="persNumbInput" 
 															width = "90%"
 															type = "Text"
+															maxLength = "8"
 															placeholder="..." 
 															showSuggestion="true"
 															valueStateText="{i18n>validPernr}"
 															value="{
 																path : 'person>/Pernr',
-																type : 'sap.ui.model.type.Integer',
-																constraints : {
-																	minimum: 10000000,
-																	maximum: 99999999
-																}
+																type : '.formatter.typePerson'	
 															}" >
 													</Input>
 												</l:VerticalLayout>
@@ -48,6 +45,7 @@
 																class="sapUiSmallMarginBottom"
 																width = "90%"
 																type="Text"
+																maxLength = "12"
 																placeholder="{i18n>origOrder}" 
 																showSuggestion="true" 
 																showValueHelp="true"
@@ -62,6 +60,7 @@
 																class="sapUiSmallMarginBottom"
 																width = "90%"
 																type="Text"
+																maxLength = "10"
 																placeholder="{i18n>salOrder}" 
 																showSuggestion="true" 
 																showValueHelp="true"
@@ -77,6 +76,7 @@
 																class="sapUiSmallMarginBottom"
 																width = "35%"
 																type="Text"
+																maxLength = "4"
 																placeholder="{i18n>operation}" 
 																showSuggestion="true"
 																value="{
@@ -88,6 +88,7 @@
 																class="sapUiSmallMarginBottom"
 																width = "40%"
 																type="Text"
+																maxLength = "6"
 																placeholder="{i18n>item}" 
 																showSuggestion="true"
 																value="{

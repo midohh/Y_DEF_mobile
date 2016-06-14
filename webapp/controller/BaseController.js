@@ -1,9 +1,11 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/routing/History"
-], function (Controller, History) {
+
+], function (Controller, History ) {
 	"use strict";
 	return Controller.extend("de.dlh.lht.ydef.controller.BaseController", {
+
 		getRouter : function () {
 			return sap.ui.core.UIComponent.getRouterFor(this);
 		},
