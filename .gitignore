@@ -1,2 +1,5 @@
-
 /.user.project.json
+/dist/
+neo-app.json
+.project.json
+
