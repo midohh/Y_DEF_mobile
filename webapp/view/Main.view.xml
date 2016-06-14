@@ -1,0 +1,124 @@
+<mvc:View	controllerName="de.dlh.lht.ydef.controller.Main"
+			xmlns:html="http://www.w3.org/1999/xhtml" 
+			displayBlock="true" 
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns="sap.m" 
+			xmlns:core="sap.ui.core" 
+			xmlns:l="sap.ui.layout"
+			xmlns:f="sap.ui.layout.form">
+	<App id="main">
+		<pages>
+			<Page title="{i18n>createDefect}">
+				<content>
+					<l:VerticalLayout class="sapUiContentPadding" width="100%">
+						<l:BlockLayout id="BlockLayout" background="Light">
+							<l:BlockLayoutRow>
+								<l:BlockLayoutCell>
+									<l:BlockLayoutRow>
+										<l:BlockLayoutCell>
+											<l:content>
+												<l:VerticalLayout>
+													<Label text="{i18n>personnelNumber}"/>
+													<Input	id="persNumbInput" 
+															width = "90%"
+															type = "Text"
+															placeholder="..." 
+															showSuggestion="true"
+															valueStateText="{i18n>validPernr}"
+															value="{
+																path : 'mainModel>/Pernr',
+																type : 'sap.ui.model.type.Integer',
+																constraints : {
+																	minimum: 10000000,
+																	maximum: 99999999
+																}
+															}" >
+													</Input>
+												</l:VerticalLayout>
+											</l:content>
+										</l:BlockLayoutCell>
+									</l:BlockLayoutRow>
+									<l:BlockLayoutRow>
+										<l:BlockLayoutCell>
+											<l:content>
+												<l:HorizontalLayout allowWrapping="true">
+													<l:VerticalLayout>
+														<Label text="{i18n>origOrder}"/>
+														<Input	id="origOrdInput" 
+																class="sapUiSmallMarginBottom"
+																width = "90%"
+																type="Text"
+																placeholder="{i18n>origOrder}" 
+																showSuggestion="true" 
+																showValueHelp="true"
+																valueHelpRequest="handleOrigOrdF4"
+																value="{
+																	path : 'mainModel>/Aufnr',
+																	type : 'sap.ui.model.type.String'
+																	}">
+														</Input>
+														<Label text="{i18n>salOrder}"/>
+														<Input	id="salOrdInput"
+																class="sapUiSmallMarginBottom"
+																width = "90%"
+																type="Text"
+																placeholder="{i18n>salOrder}" 
+																showSuggestion="true" 
+																showValueHelp="true"
+																valueHelpRequest="handleSalOrdF4"
+																value="{
+																	path : 'mainModel>/Kdauf',
+																	type : 'sap.ui.model.type.String'}">
+														</Input>
+													</l:VerticalLayout>
+													<l:VerticalLayout>
+														<Label text="{i18n>operation}"/>
+														<Input	id="operInput"
+																class="sapUiSmallMarginBottom"
+																width = "90%"
+																type="Text"
+																placeholder="{i18n>operation}" 
+																showSuggestion="true"
+																value="{
+																	path : 'mainModel>/Vornr',
+																	type : 'sap.ui.model.type.String'}">
+														</Input>
+														<Label text="{i18n>item}"/>
+														<Input	id="itemInput"
+																class="sapUiSmallMarginBottom"
+																width = "90%"
+																type="Text"
+																placeholder="{i18n>item}" 
+																showSuggestion="true"
+																value="{
+																	path : 'mainModel>/Kdpos',
+																	type : 'sap.ui.model.type.String'}">
+														</Input>
+													</l:VerticalLayout>
+												</l:HorizontalLayout> 	
+											</l:content>
+										</l:BlockLayoutCell>
+									</l:BlockLayoutRow>
+								</l:BlockLayoutCell>
+							</l:BlockLayoutRow>
+						</l:BlockLayout>
+						<Button text="{i18n>next}"
+								icon="sap-icon://navigation-right-arrow"
+								press="onPressNext">
+							<layoutData>
+								<FlexItemData growFactor="1" />
+							</layoutData>
+						</Button>
+<!--						<Button text="Test Btn"
+								press="onPressTest">
+							<layoutData>
+								<FlexItemData growFactor="1" />
+							</layoutData>
+						</Button>-->
+						
+					</l:VerticalLayout>					
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

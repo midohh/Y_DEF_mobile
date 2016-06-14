@@ -1,0 +1,223 @@
+<mvc:View	controllerName="de.dlh.lht.ydef.controller.Detail"
+			xmlns:html="http://www.w3.org/1999/xhtml" 
+			displayBlock="true" 
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns="sap.m" 
+			xmlns:core="sap.ui.core" 
+			xmlns:l="sap.ui.layout"
+			xmlns:f="sap.ui.layout.form">
+	
+	<App>
+		<pages>
+			<Page	title="{i18n>createFinding}"       
+					showNavButton="true"
+					navButtonPress="onNavBackDetail">
+				<content>
+					<l:VerticalLayout class="sapUiContentPadding" width="100%">
+						<l:BlockLayout id="BlockLayout" background="Light">
+							<l:BlockLayoutRow>
+								<l:BlockLayoutCell>
+								<l:VerticalLayout> 
+<!--									<l:VerticalLayout> -->
+									<Label text="{i18n>findingTitle}"/>
+									<Input	id="qmtxt" 
+											width = "100%"
+											type="Text"
+											placeholder="{i18n>findingTitle}" 
+											showSuggestion="true"
+											value="{detailModel>/Qmtxt}">
+									</Input>
+<!--									</l:VerticalLayout> -->
+										<l:VerticalLayout>		
+											<Label text="{i18n>ATAChapterSection}"/>							
+											<l:HorizontalLayout allowWrapping="true">
+												<l:VerticalLayout>
+													<Input	id="atamain" 
+															width = "90%"
+															type="Text"
+															placeholder="{i18n>ATAChapter}" 
+															value="{detailModel>/Atamain}"
+															showSuggestion="true"
+															showValueHelp="true"
+															valueHelpRequest="handleATAF4">
+													</Input>
+												</l:VerticalLayout>
+												<l:VerticalLayout>
+													<Input	id="atasub" 
+															width = "60%"
+															type="Text"
+															placeholder="{i18n>ATASection}" 
+															value="{detailModel>/Atasub}"
+															showSuggestion="true" 
+															showValueHelp="true"
+															valueHelpRequest="handleATAF4">
+													</Input>
+												</l:VerticalLayout>
+												<CheckBox text="{i18n>cpcp}"
+														  selected="false" />
+											</l:HorizontalLayout>
+										</l:VerticalLayout>	
+										<l:VerticalLayout>		
+											<Label text="{i18n>workCenter}"/>							
+											<l:HorizontalLayout allowWrapping="true">
+												<l:VerticalLayout>
+													<Input	id="marbpl" 
+															width = "90%"
+															type="Text"
+															placeholder="{i18n>workCenter}" 
+															value="{detailModel>/Marbpl}"
+															showSuggestion="true"
+															showValueHelp="true"
+															valueHelpRequest="handleMarbplF4">
+													</Input>
+												</l:VerticalLayout>
+												<l:VerticalLayout>
+													<Input	id="werks" 
+															width = "60%"
+															type="Text"
+															placeholder="{i18n>plant}"
+															value="{detailModel>/Werks}"
+															enabled="true"
+															editable="false">
+													</Input>
+												</l:VerticalLayout>
+											</l:HorizontalLayout>
+										</l:VerticalLayout>
+										<l:VerticalLayout>		
+											<Label text="{i18n>defectType}"/>							
+											<l:HorizontalLayout allowWrapping="true">
+												<l:VerticalLayout>
+													<Input	id="qmgrp" 
+															width = "90%"
+															type="Text"
+															placeholder="{i18n>codeGrp}"
+															value="{detailModel>/Qmgrp}"
+															showSuggestion="true"
+															showValueHelp="true"
+															valueHelpRequest="handleQmgrpF4">
+													</Input>
+												</l:VerticalLayout>
+												<l:VerticalLayout>
+													<Input	id="qmcod" 
+															width = "60%"
+															type="Text"
+															placeholder="{i18n>code}"
+															value="{detailModel>/Qmcod}"
+															showSuggestion="true"
+															showValueHelp="true"
+															valueHelpRequest="handleQmgrpF4">
+													</Input>
+												</l:VerticalLayout>
+											</l:HorizontalLayout>
+										</l:VerticalLayout>
+										<l:VerticalLayout>
+											<Label text="{i18n>findingRef}"/>
+											<l:HorizontalLayout allowWrapping="true">
+												<l:VerticalLayout>
+													<Input	id="finref" 
+															width = "90%"
+															type="Text"
+															placeholder="{i18n>reference}"
+															value="{detailModel>/Finref}"
+															showSuggestion="true"
+															showValueHelp="true"
+															valueHelpRequest="handleFinrefF4">
+													</Input>
+												</l:VerticalLayout>
+												<l:VerticalLayout>
+													<Input	id="finref_txt" 
+															width = "100%"
+															type="Text"
+															placeholder="{i18n>referrenceTxt}"
+															value="{detailModel>/Finref_text}"
+															showSuggestion="true">
+													</Input>
+												</l:VerticalLayout>
+											</l:HorizontalLayout>
+										</l:VerticalLayout>
+										<l:VerticalLayout>
+											<Label text="{i18n>stratPhasDay}"/>
+											<l:HorizontalLayout allowWrapping="true">
+												<l:VerticalLayout>
+													<Input	id="phasab" 
+															width = "90%"
+															type="Text"
+															placeholder="{i18n>phase}"
+															value="{detailModel>/Phasab}"
+															showSuggestion="true"
+															showValueHelp="true"
+															valueHelpRequest="handlePhasF4">
+													</Input>
+												</l:VerticalLayout>
+												<l:VerticalLayout>
+													<Input	id="dayab" 
+															width = "35%"
+															type="Text"
+															placeholder="{i18n>day}"
+															value="{detailModel>/Dayab}"
+															showSuggestion="true"
+															showValueHelp="true"
+															valueHelpRequest="handleDayF4">
+													</Input>
+												</l:VerticalLayout>
+											</l:HorizontalLayout>
+										</l:VerticalLayout>	
+										<l:VerticalLayout>
+											<Label text="{i18n>endPhasDay}"/>
+											<l:HorizontalLayout allowWrapping="true">
+												<l:VerticalLayout>
+													<Input	id="phasbis" 
+															width = "90%"
+															type="Text"
+															placeholder="{i18n>phase}"
+															value="{detailModel>/Phasbis}"
+															showSuggestion="true"
+															showValueHelp="true"
+															valueHelpRequest="handlePhasF4">
+													</Input>
+												</l:VerticalLayout>
+												<l:VerticalLayout>
+													<Input	id="daybis" 
+															width = "35%"
+															type="Text"
+															placeholder="{i18n>day}"
+															value="{detailModel>/Daybis}"
+															showSuggestion="true"
+															showValueHelp="true"
+															valueHelpRequest="handleDayF4">
+													</Input>
+												</l:VerticalLayout>
+											</l:HorizontalLayout>
+										</l:VerticalLayout>
+									<Label text="{i18n>findingDetails}"/>	
+									<TextArea	id="findingDetails"
+												value="{detailModel>/Noti_text}"
+												width = "100%">
+									</TextArea>	
+									</l:VerticalLayout>		
+								</l:BlockLayoutCell>
+							</l:BlockLayoutRow>
+							<l:BlockLayoutRow>
+								<l:BlockLayoutCell>
+									<Button text="{i18n>save}"
+											icon="sap-icon://save"
+											press="onPressSave">
+										<layoutData>
+											<FlexItemData growFactor="1" />
+										</layoutData>
+									</Button>
+								</l:BlockLayoutCell>
+							</l:BlockLayoutRow>
+						</l:BlockLayout>
+					</l:VerticalLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
+
+<!--									<l:HorizontalLayout 
+										class="sapUiContentPadding"
+										allowWrapping="true">
+										
+									</l:HorizontalLayout>	-->

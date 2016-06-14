@@ -41,7 +41,7 @@
 	"sap.ui5": {
 		"_version": "1.1.0",
 		"rootView": {
-			"viewName": "de.dlh.lht.ydef.view.main",
+			"viewName": "de.dlh.lht.ydef.view.Main",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -68,6 +68,46 @@
 			"css": [{
 				"uri": "css/style.css"
 			}]
-		}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "de.dlh.lht.ydef.view",
+				"controlId": "main",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "appMain",
+					"target": "main"
+				},
+				{
+					"pattern": "detail",
+					"name": "detail",
+					"target": "detail"
+				}
+			],
+			"targets": {
+				"main": {
+					"viewName": "Main",
+					"viewLevel": 1
+				},
+				"detail": {
+					"viewPath": "de.dlh.lht.ydef.view",
+					"viewName": "Detail",
+					"viewLevel": 2
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"transition": "show"
+				}
+			}
+		}		
 	}
 }
