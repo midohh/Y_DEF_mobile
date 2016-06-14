@@ -78,7 +78,6 @@ sap.ui.define([
 //~~~~~~~~~~~~~~~~~~~~~~~ Value Help~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~				
 		handleOrigOrdF4: function (){
 				var that= this;
-			    console.log("ValueHelp");
 			
 			    var oValueHelpDialog = new sap.ui.comp.valuehelpdialog.ValueHelpDialog({
 			      title: "Order Number",
@@ -112,7 +111,7 @@ sap.ui.define([
 				});
 					
 					//~~~~~~~~~~~~~~~~~oData Model~~~~~~~~~~~~~~~~~~	    
-				/*	var url = "/sap/opu/odata/sap/ZUI5_NOTIFICATION_SRV/"; 			
+/*					var url = "/sap/opu/odata/sap/ZUI5_NOTIFICATION_SRV/"; 			
 
 					var oModel = new sap.ui.model.odata.ODataModel(url);
 				    var properties = oModel.getServiceMetadata().dataServices.schema[0].entityType[0].property;
@@ -126,12 +125,12 @@ sap.ui.define([
 				    var oMetaModel = new sap.ui.model.json.JSONModel();
 				    oMetaModel.setData({cols: cols});
 				    oValueHelpDialog.setModel(oMetaModel, "columns");
-				
+*/				
 				    
 			//~~~~~~~~~~~~~~~bind Rows~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	    	    
 				    var oRowsModel = new sap.ui.model.json.JSONModel();
 				    
-					oModel.read("/NotiTypeF4Set", null, null, true,
+/*					oModel.read("/NotiTypeF4Set", null, null, true,
 							function(oData, response) {
 								JSON.stringify(oData);
 								oRowsModel.setData(oData);
@@ -147,7 +146,7 @@ sap.ui.define([
 						filterBarExpanded: false,
 						showGoOnFB: !sap.ui.Device.system.phone,
 						search: function() {
-							sap.m.MessageToast.show("Search pressed '"+arguments[0].mParameters.selectionSet[0].getValue()+"''");
+							sap.m.MessageToast.show("Search pressed '" + arguments[0]._mParameters.selectionSet[0].getValue() + "''");
 						}
 					});			
 							
@@ -164,14 +163,11 @@ sap.ui.define([
 					oValueHelpDialog.setFilterBar(oFilterBar);
 			//~~~~~~~~~~~~~~~open Value Help~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~		    
 				    oValueHelpDialog.open();
-					console.log("handleValueHelp");
 			},
 			
 			
 			handleSalOrdF4: function (){
 					var that= this;
-				    console.log("ValueHelp");
-			
 				    var oValueHelpDialog = new sap.ui.comp.valuehelpdialog.ValueHelpDialog({
 				      title: "Order Number",
 				      modal: true,
@@ -218,13 +214,13 @@ sap.ui.define([
 			
 				    var oMetaModel = new sap.ui.model.json.JSONModel();
 				    oMetaModel.setData({cols: cols});
-				    oValueHelpDialog.setModel(oMetaModel, "columns");
-				
+				    oValueHelpDialog.setModel(oMetaModel, "columns"); 
+*/
 				    
 			//~~~~~~~~~~~~~~~bind Rows~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	    	    
 				    var oRowsModel = new sap.ui.model.json.JSONModel();
 				    
-					oModel.read("/NotiTypeF4Set", null, null, true,
+/*					oModel.read("/NotiTypeF4Set", null, null, true,
 							function(oData, response) {
 								JSON.stringify(oData);
 								oRowsModel.setData(oData);
@@ -240,7 +236,7 @@ sap.ui.define([
 						filterBarExpanded: false,
 						showGoOnFB: !sap.ui.Device.system.phone,
 						search: function() {
-							sap.m.MessageToast.show("Search pressed '"+arguments[0].mParameters.selectionSet[0].getValue()+"''");
+							sap.m.MessageToast.show("Search pressed '" + arguments[0]._mParameters.selectionSet[0].getValue() + "''");
 						}
 					});			
 							
@@ -257,7 +253,6 @@ sap.ui.define([
 					oValueHelpDialog.setFilterBar(oFilterBar);
 			//~~~~~~~~~~~~~~~open Value Help~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~		    
 				    oValueHelpDialog.open();
-					console.log("handleValueHelp");				
 			}
 
 		
