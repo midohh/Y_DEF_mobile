@@ -61,21 +61,21 @@
 					"bundleName": "de.dlh.lht.ydef.i18n.i18n"
 				}
 			},
-			"person" : {
-				"type" : "sap.ui.model.json.JSONModel",
-				"uri" : "model/Person.json"
+			"person": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Person.json"
 			},
-			"salesOrder" : {
-				"type" : "sap.ui.model.json.JSONModel",
-				"uri" : "model/SalesOrder.json"
+			"salesOrder": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/SalesOrder.json"
 			},
-			"origOrder" : {
-				"type" : "sap.ui.model.json.JSONModel",
-				"uri" : "model/OrigOrder.json"
+			"origOrder": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/OrigOrder.json"
 			},
-			"defect" : {
-				"type" : "sap.ui.model.json.JSONModel",
-				"uri" : "model/Defect.json"
+			"defect": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Defect.json"
 			}
 		},
 		"resources": {
