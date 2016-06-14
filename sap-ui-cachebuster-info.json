@@ -1,3 +1,11 @@
 {
-  "README.md": "1465895416000"
+  "README.md": "1465895416000",
+  "webapp/view/main.view.xml": "1465896823000",
+  "webapp/controller/main.controller.js": "1465896823000",
+  "webapp/i18n/i18n.properties": "1465896823000",
+  "webapp/model/models.js": "1465896823000",
+  "webapp/Component.js": "1465896823000",
+  "webapp/css/style.css": "1465896823000",
+  "webapp/manifest.json": "1465896823000",
+  "webapp/index.html": "1465896823000"
 }
