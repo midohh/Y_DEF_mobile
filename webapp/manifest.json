@@ -29,7 +29,7 @@
 		"deviceTypes": {
 			"desktop": true,
 			"tablet": true,
-			"phone": true
+			"phone": false
 		},
 		"supportedThemes": [
 			"sap_hcb",
@@ -60,6 +60,22 @@
 				"settings": {
 					"bundleName": "de.dlh.lht.ydef.i18n.i18n"
 				}
+			},
+			"person" : {
+				"type" : "sap.ui.model.json.JSONModel",
+				"uri" : "model/Person.json"
+			},
+			"salesOrder" : {
+				"type" : "sap.ui.model.json.JSONModel",
+				"uri" : "model/SalesOrder.json"
+			},
+			"origOrder" : {
+				"type" : "sap.ui.model.json.JSONModel",
+				"uri" : "model/OrigOrder.json"
+			},
+			"defect" : {
+				"type" : "sap.ui.model.json.JSONModel",
+				"uri" : "model/Defect.json"
 			}
 		},
 		"resources": {

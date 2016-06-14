@@ -26,7 +26,7 @@
 															showSuggestion="true"
 															valueStateText="{i18n>validPernr}"
 															value="{
-																path : 'mainModel>/Pernr',
+																path : 'person>/Pernr',
 																type : 'sap.ui.model.type.Integer',
 																constraints : {
 																	minimum: 10000000,
@@ -53,7 +53,7 @@
 																showValueHelp="true"
 																valueHelpRequest="handleOrigOrdF4"
 																value="{
-																	path : 'mainModel>/Aufnr',
+																	path : 'origOrder>/Aufnr',
 																	type : 'sap.ui.model.type.String'
 																	}">
 														</Input>
@@ -67,7 +67,7 @@
 																showValueHelp="true"
 																valueHelpRequest="handleSalOrdF4"
 																value="{
-																	path : 'mainModel>/Kdauf',
+																	path : 'salesOrder>/Kdauf',
 																	type : 'sap.ui.model.type.String'}">
 														</Input>
 													</l:VerticalLayout>
@@ -75,23 +75,23 @@
 														<Label text="{i18n>operation}"/>
 														<Input	id="operInput"
 																class="sapUiSmallMarginBottom"
-																width = "90%"
+																width = "35%"
 																type="Text"
 																placeholder="{i18n>operation}" 
 																showSuggestion="true"
 																value="{
-																	path : 'mainModel>/Vornr',
+																	path : 'origOrder>/Vornr',
 																	type : 'sap.ui.model.type.String'}">
 														</Input>
 														<Label text="{i18n>item}"/>
 														<Input	id="itemInput"
 																class="sapUiSmallMarginBottom"
-																width = "90%"
+																width = "40%"
 																type="Text"
 																placeholder="{i18n>item}" 
 																showSuggestion="true"
 																value="{
-																	path : 'mainModel>/Kdpos',
+																	path : 'salesOrder>/Kdpos',
 																	type : 'sap.ui.model.type.String'}">
 														</Input>
 													</l:VerticalLayout>
@@ -99,16 +99,14 @@
 											</l:content>
 										</l:BlockLayoutCell>
 									</l:BlockLayoutRow>
+									<Button text="{i18n>next}"
+											iconFirst="false"
+											icon="sap-icon://navigation-right-arrow"
+											press="onPressNext" />
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 						</l:BlockLayout>
-						<Button text="{i18n>next}"
-								icon="sap-icon://navigation-right-arrow"
-								press="onPressNext">
-							<layoutData>
-								<FlexItemData growFactor="1" />
-							</layoutData>
-						</Button>
+						
 <!--						<Button text="Test Btn"
 								press="onPressTest">
 							<layoutData>

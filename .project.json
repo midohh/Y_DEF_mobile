@@ -6,7 +6,8 @@
   "build": {
     "targetFolder": "dist",
     "sourceFolder": "webapp",
-    "buildRequired": true
+    "buildRequired": true,
+    "lastBuildDateTime": "Tue, 14 Jun 2016 12:12:39 GMT"
   },
   "generation": [
     {
@@ -33,5 +34,10 @@
     "notifyBeforePushLevel": "Error",
     "blockPush": false,
     "blockPushLevel": "Error"
+  },
+  "hcpdeploy": {
+    "account": "s0007545714trial",
+    "name": "ydefmobile",
+    "lastVersionWeTriedToDeploy": "1.0.0"
   }
 }

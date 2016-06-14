@@ -34,7 +34,14 @@ sap.ui.define([
 		},
 		
 		onPressSave : function(oEvent){
+			//validate input data
 			
+			//prepare model
+			this.getView().getModel("detailModel").destroy();
+			//save to Service
+			
+			//Navigate
+			this.getRouter().navTo("main");
 		},
 		
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~Value Help~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

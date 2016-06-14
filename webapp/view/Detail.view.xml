@@ -201,11 +201,7 @@
 								<l:BlockLayoutCell>
 									<Button text="{i18n>save}"
 											icon="sap-icon://save"
-											press="onPressSave">
-										<layoutData>
-											<FlexItemData growFactor="1" />
-										</layoutData>
-									</Button>
+											press="onPressSave" />
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
 						</l:BlockLayout>
