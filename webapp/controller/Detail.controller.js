@@ -12,6 +12,11 @@ sap.ui.define([
 			oTarget.attachDisplay(function (oEvent) {
 				this._oData = oEvent.getParameter("data"); //store the data
 			}, this);
+			
+//			var oModel = new sap.ui.model.odata.ODataModel([sServiceUrl], [mParameters]);
+			
+//			this.getView().setModel(oJsonModel, 'detailModel');
+			
 		},
 		// override the parent's onNavBack (inherited from BaseController)
 		onNavBackDetail : function (oEvent){
