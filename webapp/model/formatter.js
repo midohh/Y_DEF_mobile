@@ -21,8 +21,80 @@ sap.ui.define([
 						throw new ValidateException("'" + oValue + "' is not a valid person number");
 					}
 				}
-		})
+		}),
 
+			typeOrigOrder : SimpleType.extend("order", {
+				formatValue: function (oValue) {
+					return oValue;
+				},
+				parseValue: function (oValue) {
+					//parsing step takes place before validating step, value can be altered
+					return oValue;
+				},
+				validateValue: function (oValue) {
+					// The following Regex is NOT a completely correct one and only used for demonstration purposes.
+					// RFC 5322 cannot even checked by a Regex and the Regex for RFC 822 is very long and complex.
+					var personregex = /^[0-9]*$/;
+					if (!oValue.match(personregex)) {
+						throw new ValidateException("'" + oValue + "' is not a valid originating Order number");
+					}
+				}
+			}),
+		
+			typeSalOrder : SimpleType.extend("order", {
+				formatValue: function (oValue) {
+					return oValue;
+				},
+				parseValue: function (oValue) {
+					//parsing step takes place before validating step, value can be altered
+					return oValue;
+				},
+				validateValue: function (oValue) {
+					// The following Regex is NOT a completely correct one and only used for demonstration purposes.
+					// RFC 5322 cannot even checked by a Regex and the Regex for RFC 822 is very long and complex.
+					var personregex = /^[0-9]*$/;
+					if (!oValue.match(personregex)) {
+						throw new ValidateException("'" + oValue + "' is not a valid originating Order number");
+					}
+				}
+			}),
+		
+			typeOperation : SimpleType.extend("operation", {
+				formatValue: function (oValue) {
+					return oValue;
+				},
+				parseValue: function (oValue) {
+					//parsing step takes place before validating step, value can be altered
+					return oValue;
+				},
+				validateValue: function (oValue) {
+					// The following Regex is NOT a completely correct one and only used for demonstration purposes.
+					// RFC 5322 cannot even checked by a Regex and the Regex for RFC 822 is very long and complex.
+					var personregex = /^[0-9]*$/;
+					if (!oValue.match(personregex)) {
+						throw new ValidateException("'" + oValue + "' is not a valid Operation number");
+					}
+				}
+			}),
+		
+			typeItem : SimpleType.extend("item", {
+				formatValue: function (oValue) {
+					return oValue;
+				},
+				parseValue: function (oValue) {
+					//parsing step takes place before validating step, value can be altered
+					return oValue;
+				},
+				validateValue: function (oValue) {
+					// The following Regex is NOT a completely correct one and only used for demonstration purposes.
+					// RFC 5322 cannot even checked by a Regex and the Regex for RFC 822 is very long and complex.
+					var personregex = /^[0-9]*$/;
+					if (!oValue.match(personregex)) {
+						throw new ValidateException("'" + oValue + "' is not a valid Item number");
+					}
+				}
+			})
+		
 		};
 	}
 );

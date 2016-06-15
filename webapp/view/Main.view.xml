@@ -50,9 +50,10 @@
 																showSuggestion="true" 
 																showValueHelp="true"
 																valueHelpRequest="handleOrigOrdF4"
+																valueStateText="{i18n>validOrigOrder}"
 																value="{
 																	path : 'origOrder>/Aufnr',
-																	type : 'sap.ui.model.type.String'
+																	type : '.formatter.typeOrigOrder'
 																	}">
 														</Input>
 														<Label text="{i18n>salOrder}"/>
@@ -65,9 +66,11 @@
 																showSuggestion="true" 
 																showValueHelp="true"
 																valueHelpRequest="handleSalOrdF4"
+																valueStateText="{i18n>validSalOrder}"
 																value="{
 																	path : 'salesOrder>/Kdauf',
-																	type : 'sap.ui.model.type.String'}">
+																	type : '.formatter.typeSalOrder'
+																	}">
 														</Input>
 													</l:VerticalLayout>
 													<l:VerticalLayout>
@@ -79,9 +82,11 @@
 																maxLength = "4"
 																placeholder="{i18n>operation}" 
 																showSuggestion="true"
+																valueStateText="{i18n>validOperation}"
 																value="{
 																	path : 'origOrder>/Vornr',
-																	type : 'sap.ui.model.type.String'}">
+																	type : '.formatter.typeOperation'
+																	}">
 														</Input>
 														<Label text="{i18n>item}"/>
 														<Input	id="itemInput"
@@ -91,9 +96,11 @@
 																maxLength = "6"
 																placeholder="{i18n>item}" 
 																showSuggestion="true"
+																valueStateText="{i18n>validItem}"
 																value="{
 																	path : 'salesOrder>/Kdpos',
-																	type : 'sap.ui.model.type.String'}">
+																	type : '.formatter.typeItem'
+																	}">
 														</Input>
 													</l:VerticalLayout>
 												</l:HorizontalLayout> 	
